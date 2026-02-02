@@ -1,0 +1,49 @@
+# Velentine-Khushi-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Khushi ❤️</title>
+    <style>
+        body { background-color: #ffe6e6; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; font-family: 'Arial', sans-serif; overflow: hidden; }
+        h1 { color: #d63384; font-size: 2.5rem; text-align: center; }
+        .buttons { margin-top: 30px; position: relative; width: 300px; height: 100px; display: flex; justify-content: center; }
+        button { padding: 15px 30px; font-size: 1.2rem; border: none; border-radius: 50px; cursor: pointer; transition: 0.3s; position: absolute; }
+        #yesBtn { background-color: #ff4d6d; color: white; left: 20px; }
+        #noBtn { background-color: #6c757d; color: white; right: 20px; }
+        #response { display: none; text-align: center; }
+        img { width: 200px; border-radius: 20px; }
+    </style>
+</head>
+<body>
+
+    <div id="main-content">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpwaG5yZzB6Z3R6bm1qZ3R6bm1qZ3R6bm1qZ3R6bm1qZ3R6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/K676fG87bV1L3yS5j8/giphy.gif" alt="Cute Cat">
+        <h1>Khushi, will you be my Valentine? ❤️</h1>
+        <div class="buttons">
+            <button id="yesBtn" onclick="showLove()">Yes</button>
+            <button id="noBtn" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <div id="response">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXpwaG5yZzB6Z3R6bm1qZ3R6bm1qZ3R6bm1qZ3R6bm1qZ3R6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/v3p3CtSrNYNLa/giphy.gif" alt="Happy">
+        <h1>Yay! I love you Khushi! ❤️✨</h1>
+    </div>
+
+    <script>
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+
+        function showLove() {
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('response').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
